@@ -11,10 +11,12 @@
     } 
     mysqli_select_db($conexion,$db_nombre) or die ("no se ncuentra la base de datos");
     mysqli_set_charset($conexion,"utf8");
-    $query="INSERT INTO Hoja1 (nombre,edad,trabajo,cedula) VALUES ('$result','$result2','$result3','$result4')";
-    $resultado=mysqli_query($conexion,$query);/*este if dice que clase d error en $resultado tengo, en caso d tener uno*/
-    if(!$resultado){
-        var_dump(mysqli_error($conexion));
+    $query="INSERT INTO Hoja1 (nombre,edad,trabajo,cedula) VALUES (?,?,?,?)";
+    $resultado=mysqli_prepare($conexion,$query);
+    $ok=mysqli_stmt_bind_param($resultado,"siss",$result,$result2,$result3,$result4);
+    $ok=mysqli_stmt_execute($resultado);
+    if($ok=false){
+        echo "fallo en la ejecucion ";
         exit;
     }else{
         echo "guardado con exito<br><br>";
@@ -25,4 +27,5 @@
                      <td>$result4</td>
                      <tr></table>";
     }
+    mysqli_stmt_close($resultado);
 ?>
