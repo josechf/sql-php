@@ -22,7 +22,7 @@
         echo "guardado con exito<br><br>";
         echo "<table><tr>
                      <td>$result</td>
-                     <td>$result2</td><br>
+                     <td>$result2</td><br><br>
                      <td>$result3</td>
                      <td>$result4</td>
                      <tr></table>";
