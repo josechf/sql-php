@@ -1,5 +1,5 @@
 <?php
-    // AQUI ELIMINO UN REGISTRO 
+    // AQUI ELIMINO UN REGISTRO metodo lazy (line 11)
     $busca=$_GET['buscar'];
     $busca5=$_GET['buscar2'];
 try{
