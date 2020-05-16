@@ -1,5 +1,5 @@
 <?php
-    // AQUI AGREGO UN REGISTRO 
+    // AQUI AGREGO UN REGISTRO usa el metodo lazy (line 14)
     $busca=$_GET['nombre'];
     $busca2=$_GET['edad'];
     $busca3=$_GET['trabajo'];
