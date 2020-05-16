@@ -1,5 +1,5 @@
 <?php
- //AQUI BUSCO UN REGISTRO
+ //AQUI BUSCO UN REGISTRO metodo lazy(line 10)
   $busca=$_GET['buscar'];
   $busca2=$_GET['buscar2'];
  try{
